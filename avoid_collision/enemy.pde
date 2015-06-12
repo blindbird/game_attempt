@@ -9,8 +9,8 @@ class Enemy {
     c=color(255,0,0);
     xpos=x;
     ypos=y;
-    hor=random(10);
-    ver=random(10);
+    hor=random(2);
+    ver=random(2);
   }
   
   void display () {
@@ -19,10 +19,10 @@ class Enemy {
   }
   
   void move () {
-    if (xpos<20||xpos>480) {
+    if (xpos<20||xpos>width-20) {
       hor=hor*-1;
     } 
-    if (ypos<20||ypos>480) {
+    if (ypos<20||ypos>height-20) {
       ver=ver*-1;
     } 
     xpos=xpos+hor;
